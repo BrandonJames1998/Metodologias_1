@@ -11,24 +11,24 @@ namespace TP_1
 			this.valor = num;
 		}
 		
-		public void getValor()
+		public int getValor()
 		{
 			return valor;
 		}
 		
 		public bool sosIgual(Comparable c)
 		{
-			Numero n = ((Numero)c).getValor();
+			Numero n = ((Numero)c);
 			return this.valor == n.getValor();
 		}
 		public bool sosMenor(Comparable c)
 		{
-			Numero n = ((Numero)c).getValor();
+			Numero n = ((Numero)c);
 			return this.valor < n.getValor();
 		}
 		public bool sosMayor(Comparable c)
 		{
-			Numero n = ((Numero)c).getValor();
+			Numero n = ((Numero)c);
 			return this.valor > n.getValor();
 		}
 	}

@@ -62,8 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Alumno.cs" />
     <Compile Include="Clases\Cola.cs" />
+    <Compile Include="Clases\ColeccionMultiple.cs" />
     <Compile Include="Clases\Numero.cs" />
+    <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Pila.cs" />
     <Compile Include="Interfaces\Coleccionable.cs" />
     <Compile Include="Interfaces\Comparable.cs" />
