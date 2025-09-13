@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TP_2
+namespace TP_3
 {
 	public interface Coleccionable
 	{

@@ -1,22 +1,22 @@
 ﻿using System;
 
-namespace TP_2
+namespace TP_3
 {
-	public class CompararPorDni : IEstrategiaAlumno
+	public class CompararPorDni : IEstrategiaComparables
 	{
-		public bool sosIgual(Alumno alu1, Alumno alu2)
+		public bool sosIgual(Comparable c1, Comparable c2)
 		{
-			return alu1.getDNI() == alu2.getDNI();
+			return ((Persona)c1).getDNI() == ((Persona)c2).getDNI();
 		}
 		
-		public bool sosMenor(Alumno alu1, Alumno alu2)
+		public bool sosMenor(Comparable c1, Comparable c2)
 		{
-			return alu1.getDNI() < alu2.getDNI();
+			return ((Persona)c1).getDNI() < ((Persona)c2).getDNI();
 		}
 		
-		public bool sosMayor(Alumno alu1, Alumno alu2)
+		public bool sosMayor(Comparable c1, Comparable c2)
 		{
-			return alu1.getDNI() > alu2.getDNI();
+			return ((Persona)c1).getDNI() == ((Persona)c2).getDNI();
 		}
 	}
 }

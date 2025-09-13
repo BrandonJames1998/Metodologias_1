@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace TP_2
+namespace TP_3
 {
-	public class Alumno : Persona
+	public class Alumno : Persona, IObservador
 	{
-		IEstrategiaAlumno estrategia;
+		IEstrategiaComparables estrategia;
 		private int legajo;
 		private double promedio;
 		
@@ -43,9 +43,30 @@ namespace TP_2
             return base.ToString() + ", Legajo: " + legajo + ", Promedio: " + promedio;
         }
         
-        public void setEstrategia(IEstrategiaAlumno estrategia)
+        public void setEstrategia(IEstrategiaComparables estrategia)
         {
         	this.estrategia = estrategia;
+        }
+        
+        public void prestarAtencion()
+        {
+        	Console.WriteLine("Prestando atención...");
+        }
+        
+        public void distraerse()
+        {
+        	Console.WriteLine("Mirando el celular...");
+        }
+        
+        public void actualizar(IObservado o)
+        {
+        	Profesor profe = (Profesor)o;
+        	if (profe.getUltimaAccion() == "hablar")
+        	{
+        		prestarAtencion();
+        	}
+        	else if (profe.getUltimaAccion() == "escribir")
+            	distraerse();
         }
 	}
 }

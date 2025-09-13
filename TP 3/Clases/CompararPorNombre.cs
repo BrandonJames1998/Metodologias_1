@@ -1,22 +1,22 @@
 ﻿using System;
 
-namespace TP_2
+namespace TP_3
 {
-	public class CompararPorNombre : IEstrategiaAlumno
+	public class CompararPorNombre : IEstrategiaComparables
 	{
-		public bool sosIgual(Alumno alu1, Alumno alu2)
+		public bool sosIgual(Comparable c1, Comparable c2)
 		{
-			return alu1.getNombre().ToLower() == alu2.getNombre().ToLower();
+			return ((Alumno)c1).getNombre().ToLower() == ((Alumno)c2).getNombre().ToLower();
 		}
 		
-		public bool sosMenor(Alumno alu1, Alumno alu2)
+		public bool sosMenor(Comparable c1, Comparable c2)
 		{
-			return string.Compare(alu1.getNombre(), alu2.getNombre()) < 0;
+			return string.Compare(((Alumno)c1).getNombre(), ((Alumno)c2).getNombre()) < 0;
 		}
 		
-		public bool sosMayor(Alumno alu1, Alumno alu2)
+		public bool sosMayor(Comparable c1, Comparable c2)
 		{
-			return string.Compare(alu1.getNombre(), alu2.getNombre()) < 0;
+			return string.Compare(((Alumno)c1).getNombre(), ((Alumno)c2).getNombre()) > 0;
 		}
 	}
 }

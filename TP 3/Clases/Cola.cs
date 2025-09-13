@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TP_2
+namespace TP_3
 {
 	public class Cola : Coleccionable, Iterable
 	{

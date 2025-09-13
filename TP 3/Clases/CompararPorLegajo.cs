@@ -1,22 +1,22 @@
 ﻿using System;
 
-namespace TP_2
+namespace TP_3
 {
-	public class CompararPorLegajo : IEstrategiaAlumno
+	public class CompararPorLegajo : IEstrategiaComparables
 	{
-		public bool sosIgual(Alumno alu1, Alumno alu2)
+		public bool sosIgual(Comparable c1, Comparable c2)
 		{
-			return alu1.getLegajo() == alu2.getLegajo();
+			return ((Alumno)c1).getLegajo() == ((Alumno)c2).getLegajo();
 		}
 		
-		public bool sosMenor(Alumno alu1, Alumno alu2)
+		public bool sosMenor(Comparable c1, Comparable c2)
 		{
-			return alu1.getLegajo() < alu2.getLegajo();
+			return ((Alumno)c1).getLegajo() < ((Alumno)c2).getLegajo();
 		}
 		
-		public bool sosMayor(Alumno alu1, Alumno alu2)
+		public bool sosMayor(Comparable c1, Comparable c2)
 		{
-			return alu1.getLegajo() > alu2.getLegajo();
+			return ((Alumno)c1).getLegajo() > ((Alumno)c2).getLegajo();
 		}
 	}
 }

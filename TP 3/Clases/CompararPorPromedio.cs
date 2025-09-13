@@ -1,22 +1,22 @@
 ﻿using System;
 
-namespace TP_2
+namespace TP_3
 {
-	public class CompararPorPromedio : IEstrategiaAlumno
+	public class CompararPorPromedio : IEstrategiaComparables
 	{
-		public bool sosIgual(Alumno alu1, Alumno alu2)
+		public bool sosIgual(Comparable c1, Comparable c2)
 		{
-			return alu1.getPromedio() == alu2.getPromedio();
+			return ((Alumno)c1).getPromedio() == ((Alumno)c2).getPromedio();
 		}
 		
-		public bool sosMenor(Alumno alu1, Alumno alu2)
+		public bool sosMenor(Comparable c1, Comparable c2)
 		{
-			return alu1.getPromedio() < alu2.getPromedio();
+			return ((Alumno)c1).getPromedio() < ((Alumno)c2).getPromedio();
 		}
 		
-		public bool sosMayor(Alumno alu1, Alumno alu2)
+		public bool sosMayor(Comparable c1, Comparable c2)
 		{
-			return alu1.getPromedio() > alu2.getPromedio();
+			return ((Alumno)c1).getPromedio() > ((Alumno)c2).getPromedio();
 		}
 	}
 }
