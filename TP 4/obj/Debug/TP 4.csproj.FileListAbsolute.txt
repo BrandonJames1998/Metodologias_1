@@ -1,0 +1,6 @@
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 4\obj\Debug\TP 4.csprojResolveAssemblyReference.cache
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 4\bin\Debug\TP 4.exe.config
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 4\bin\Debug\TP 4.exe
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 4\bin\Debug\TP 4.pdb
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 4\obj\Debug\TP 4.exe
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 4\obj\Debug\TP 4.pdb

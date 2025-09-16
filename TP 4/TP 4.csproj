@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{9F19551F-E8D1-4A0C-A35F-FD860B6A5FB4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TP_4</RootNamespace>
+    <AssemblyName>TP 4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Alumno.cs" />
+    <Compile Include="Clases\AlumnoAdapter.cs" />
+    <Compile Include="Clases\AlumnoMuyEstudioso.cs" />
+    <Compile Include="Clases\Cola.cs" />
+    <Compile Include="Clases\ColeccionMultiple.cs" />
+    <Compile Include="Clases\CompararPorAntiguedad.cs" />
+    <Compile Include="Clases\CompararPorDni.cs" />
+    <Compile Include="Clases\CompararPorLegajo.cs" />
+    <Compile Include="Clases\CompararPorNombre.cs" />
+    <Compile Include="Clases\CompararPorPromedio.cs" />
+    <Compile Include="Clases\Conjunto.cs" />
+    <Compile Include="Clases\DecoradorCondicion.cs" />
+    <Compile Include="Clases\DecoradorLegajo.cs" />
+    <Compile Include="Clases\DecoradorNotaEnLetras.cs" />
+    <Compile Include="Clases\DecoradorAlumno.cs" />
+    <Compile Include="Clases\DecoradorRecuadro.cs" />
+    <Compile Include="Clases\DecoradorRecuadroExtendido.cs" />
+    <Compile Include="Clases\FabricaDeAlumnos.cs" />
+    <Compile Include="Clases\FabricaDeComparables.cs" />
+    <Compile Include="Clases\FabricaDeNumeros.cs" />
+    <Compile Include="Clases\FabricaDeProfesores.cs" />
+    <Compile Include="Clases\GeneradorDeDatosAleatorios.cs" />
+    <Compile Include="Clases\IteradorDeCola.cs" />
+    <Compile Include="Clases\IteradorDeConjunto.cs" />
+    <Compile Include="Clases\IteradorDePila.cs" />
+    <Compile Include="Clases\LectorDeDatos.cs" />
+    <Compile Include="Clases\Numero.cs" />
+    <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\Pila.cs" />
+    <Compile Include="Clases\Profesor.cs" />
+    <Compile Include="Clases\StudentsFactory.cs" />
+    <Compile Include="Interfaces\Coleccionable.cs" />
+    <Compile Include="Interfaces\Comparable.cs" />
+    <Compile Include="Interfaces\IAlumno.cs" />
+    <Compile Include="Interfaces\IEstrategiaComparables.cs" />
+    <Compile Include="Interfaces\IObservado.cs" />
+    <Compile Include="Interfaces\IObservador.cs" />
+    <Compile Include="Interfaces\Iterable.cs" />
+    <Compile Include="Interfaces\Iterador.cs" />
+    <Compile Include="MDPI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clases" />
+    <Folder Include="Interfaces" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
