@@ -85,11 +85,12 @@ namespace MetodologíasDeProgramaciónI
 		public int Compare(Student s1, Student s2)
 		{
 			if(s1.equals(s2))
-		       return 0;
-		   else if(s1.lessThan(s2))
-		       return -1; 
-		   else
-		       return 1;
+				return 0;
+			else
+			if(s1.lessThan(s2))
+				return 1;
+			else
+				return -1;
 		}
 	}
 	

@@ -3,7 +3,7 @@ using MetodologíasDeProgramaciónI;
 
 namespace TP_4
 {
-	public class AlumnoAdapter : Student, Comparable
+	public class AlumnoAdapter : Student
 	{
 		private IAlumno alumno;
 
@@ -52,35 +52,6 @@ namespace TP_4
             if (otro == null) return false;
             return alumno.sosMayor(otro.alumno);
         }
-        
-        public bool sosIgual(Comparable c)
-        {
-        	AlumnoAdapter a = c as AlumnoAdapter;
-		    if (a == null)
-		        return false;
-		    return this.getCalificacion() == a.getCalificacion();
-        }
-        public bool sosMenor(Comparable c)
-        {
-        	AlumnoAdapter a = c as AlumnoAdapter;
-			if (a == null)
-				return false;
-			return this.getCalificacion() < a.getCalificacion();
-        }
-			
-        public bool sosMayor(Comparable c)
-        {
-        	AlumnoAdapter a = c as AlumnoAdapter;
-			if (a == null)
-				return false;
-			return this.getCalificacion() > a.getCalificacion();
-        }
-        
-        public int getCalificacion()
-		{
-		    return alumno.getCalificacion();
-		}
-	   
     }
 }
 	

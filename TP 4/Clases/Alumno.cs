@@ -48,17 +48,17 @@ namespace TP_4
             return this.getNombre() + ": " + this.getCalificacion();
         }
 		
-		public bool sosIgual(Alumno a)
+		public override bool sosIgual(Comparable otro)
 		{
-			return estrategia.sosIgual(this, a);
+			return this.estrategia.sosIgual(this, (Alumno)otro);
 		}
-    	public bool sosMenor(Alumno a)
+    	public override bool sosMenor(Comparable otro)
     	{
-    		return estrategia.sosMenor(this, a);
+    		return this.estrategia.sosMenor(this, (Alumno)otro);
     	}
-    	public bool sosMayor(Alumno a)
+    	public override bool sosMayor(Comparable otro)
     	{
-    		return estrategia.sosMayor(this, a);
+    		return this.estrategia.sosMayor(this, (Alumno)otro);
     	}
         
         public override string ToString()
@@ -90,25 +90,6 @@ namespace TP_4
         	}
         	else if (profe.getUltimaAccion() == "escribir")
             	distraerse();
-        }
-        
-        public bool sosIgual(IAlumno otro)
-        {
-        	Alumno a = otro as Alumno;
-		    if (a == null) return false;
-		    return this.sosIgual(a);
-        }
-        public bool sosMenor(IAlumno otro)
-        {
-        	Alumno a = otro as Alumno;
-		    if (a == null) return false;
-		    return this.sosMenor(a);
-        }
-        public bool sosMayor(IAlumno otro)
-        {
-        	Alumno a = otro as Alumno;
-		    if (a == null) return false;
-		    return this.sosMayor(a);
         }
 	}
 }

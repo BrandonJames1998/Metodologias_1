@@ -29,24 +29,23 @@ namespace TP_4
 		}
 	    public virtual int responderPregunta(int pregunta)
 	    {
-	    	Random rnd = new Random();
-            return rnd.Next(1, 4);
+	    	return this.alumno.responderPregunta(pregunta);
 	    }
 	    public void setCalificacion(int nota)
 	    {
 	    	alumno.setCalificacion(nota);
 	    }
-	    public bool sosIgual(IAlumno otro)
+	    public bool sosIgual(Comparable otro)
 	    {
-	    	return alumno.sosIgual(otro);
+	    	return this.alumno.sosIgual(((DecoradorAlumno)otro).alumno);
 	    }
-        public bool sosMenor(IAlumno otro)
+        public bool sosMenor(Comparable otro)
         {
-        	return alumno.sosMenor(otro);
+        	return this.alumno.sosMenor(((DecoradorAlumno)otro).alumno);
         }
-        public bool sosMayor(IAlumno otro)
+        public bool sosMayor(Comparable otro)
         {
-        	return alumno.sosMayor(otro);
+        	 return this.alumno.sosMayor(((DecoradorAlumno)otro).alumno);
         }
 	}
 }

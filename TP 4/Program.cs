@@ -56,25 +56,24 @@ namespace TP_4
 			
 			for (int i = 0; i < 10; i++)
 		    {
-		        Comparable c = FabricaDeComparables.crearAleatorio(4); // usa StudentsFactory
-			    AlumnoAdapter adapter = c as AlumnoAdapter;
-			    if (adapter != null)
-			        students.Add(adapter);
+		        IAlumno c = (IAlumno)FabricaDeComparables.crearAleatorio(4);
+			    AlumnoAdapter adapter = new AlumnoAdapter(c); 
+			    students.Add(adapter);
 		    }
 			
 			for (int i = 0; i < 10; i++)
 		    {
-		        AlumnoMuyEstudioso am = new AlumnoMuyEstudioso(
-		            generador.stringAleatorio(),
-		            generador.numeroAleatorio(100000000),
-		            generador.numeroAleatorio(500000),
-		            generador.numeroAleatorio(10)
-		        );
-				
-		        IAlumno decorado = new DecoradorLegajo(am);
-			    decorado = new DecoradorNotaEnLetras(decorado);
+		        IAlumno am = new AlumnoMuyEstudioso(
+				generador.stringAleatorio(),
+		        generador.numeroAleatorio(100000000),
+		        generador.numeroAleatorio(500000),
+		        generador.numeroAleatorio(10));
+			    
+				IAlumno decorado = new DecoradorLegajo(am);
+				decorado = new DecoradorNotaEnLetras(decorado);
 			    decorado = new DecoradorCondicion(decorado);
 			    decorado = new DecoradorRecuadroExtendido(decorado);
+			    
 			    AlumnoAdapter adapter = new AlumnoAdapter(decorado);
 			    students.Add(adapter);
 		    }

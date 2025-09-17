@@ -8,40 +8,25 @@ namespace TP_4
 		public override Comparable crearAleatorio()
 	    {
 	
-	        Alumno alumno = new Alumno(
-	            generador.stringAleatorio(),
-	            generador.numeroAleatorio(100000000), 
-	            generador.numeroAleatorio(500000),    
-	            generador.numeroAleatorio(10)         
-	        );
-	
+	        IAlumno alumno = (IAlumno)crearAleatorio(2);
 	        IAlumno decorado = new DecoradorLegajo(alumno);
 	        decorado = new DecoradorNotaEnLetras(decorado);
 	        decorado = new DecoradorCondicion(decorado);
 	        decorado = new DecoradorRecuadro(decorado);
 	        decorado = new DecoradorRecuadroExtendido(decorado);
-	
-	        return new AlumnoAdapter(decorado);
+	        return decorado;
 	    }
 	
 	    public override Comparable crearPorTeclado()
 	    {
-	        LectorDeDatos lector = new LectorDeDatos();
-	
-	        Alumno alumno = new Alumno(
-	            lector.stringPorTeclado(),
-	            lector.numeroPorTeclado(),
-	            lector.numeroPorTeclado(),
-	            lector.numeroPorTeclado()
-	        );
-	
+	        IAlumno alumno = (IAlumno)crearAleatorio(2);
 	        IAlumno decorado = new DecoradorLegajo(alumno);
 	        decorado = new DecoradorNotaEnLetras(decorado);
 	        decorado = new DecoradorCondicion(decorado);
 	        decorado = new DecoradorRecuadro(decorado);
 	        decorado = new DecoradorRecuadroExtendido(decorado);
 	
-	        return new AlumnoAdapter(decorado);
+	        return decorado;
 	    }
 	}
 }

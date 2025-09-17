@@ -3,7 +3,7 @@
 namespace TP_4
 {
 
-	public interface IAlumno
+	public interface IAlumno : Comparable
 	{
 		string getNombre();
 	    int getLegajo();
@@ -11,8 +11,5 @@ namespace TP_4
 	    string mostrarCalificacion();
 	    int responderPregunta(int pregunta);
         void setCalificacion(int nota);
-        bool sosIgual(IAlumno otro);
-        bool sosMenor(IAlumno otro);
-        bool sosMayor(IAlumno otro);
 	}
 }
