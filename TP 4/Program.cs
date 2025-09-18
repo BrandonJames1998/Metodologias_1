@@ -63,15 +63,12 @@ namespace TP_4
 			
 			for (int i = 0; i < 10; i++)
 		    {
-		        IAlumno am = new AlumnoMuyEstudioso(
-				generador.stringAleatorio(),
-		        generador.numeroAleatorio(100000000),
-		        generador.numeroAleatorio(500000),
-		        generador.numeroAleatorio(10));
+				IAlumno am = (IAlumno)FabricaDeComparables.crearAleatorio(5);
 			    
 				IAlumno decorado = new DecoradorLegajo(am);
 				decorado = new DecoradorNotaEnLetras(decorado);
 			    decorado = new DecoradorCondicion(decorado);
+			    decorado = new DecoradorRecuadro(decorado);
 			    decorado = new DecoradorRecuadroExtendido(decorado);
 			    
 			    AlumnoAdapter adapter = new AlumnoAdapter(decorado);

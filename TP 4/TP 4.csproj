@@ -62,6 +62,7 @@
     <Compile Include="Clases\DecoradorRecuadro.cs" />
     <Compile Include="Clases\DecoradorRecuadroExtendido.cs" />
     <Compile Include="Clases\FabricaDeAlumnos.cs" />
+    <Compile Include="Clases\FabricaDeAlumnosMuyEstudiosos.cs" />
     <Compile Include="Clases\FabricaDeComparables.cs" />
     <Compile Include="Clases\FabricaDeNumeros.cs" />
     <Compile Include="Clases\FabricaDeProfesores.cs" />

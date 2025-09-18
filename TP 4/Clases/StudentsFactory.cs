@@ -19,7 +19,7 @@ namespace TP_4
 	
 	    public override Comparable crearPorTeclado()
 	    {
-	        IAlumno alumno = (IAlumno)crearAleatorio(2);
+	        IAlumno alumno = (IAlumno)crearPorTeclado(2);
 	        IAlumno decorado = new DecoradorLegajo(alumno);
 	        decorado = new DecoradorNotaEnLetras(decorado);
 	        decorado = new DecoradorCondicion(decorado);
