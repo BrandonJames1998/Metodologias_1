@@ -1,0 +1,5 @@
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 5\bin\Debug\TP 5.exe.config
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 5\bin\Debug\TP 5.exe
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 5\bin\Debug\TP 5.pdb
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 5\obj\Debug\TP 5.exe
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 5\obj\Debug\TP 5.pdb
