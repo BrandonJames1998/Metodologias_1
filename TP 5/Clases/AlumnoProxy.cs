@@ -57,19 +57,60 @@ namespace TP_5
 	    
 	    public bool sosIgual(Comparable otro)
 		{
+			asegurarAlumnoReal();
+		    return alumnoReal.sosIgual(((AlumnoProxy)otro).alumnoReal);
+		}
+		public bool sosMenor(Comparable otro)
+		{
+		   asegurarAlumnoReal();
+		   return alumnoReal.sosMenor(((AlumnoProxy)otro).alumnoReal);
+		}
+		public bool sosMayor(Comparable otro)
+		{
+		    asegurarAlumnoReal();
+		    return alumnoReal.sosMayor(((AlumnoProxy)otro).alumnoReal);
+		}
+	    /*
+	    public bool sosIgual(Comparable otro)
+		{
 	    	asegurarAlumnoReal();
-	    	return alumnoReal.sosIgual(otro);
+
+		    AlumnoProxy otroProxy = otro as AlumnoProxy;
+		    if (otroProxy != null)
+		    {
+		        otroProxy.asegurarAlumnoReal();
+		        return alumnoReal.sosIgual(otroProxy.alumnoReal);
+		    }
+		
+		    return alumnoReal.sosIgual(otro);
 		}
     	public bool sosMenor(Comparable otro)
     	{
     		asegurarAlumnoReal();
-    		return alumnoReal.sosMenor(otro);
+
+		    AlumnoProxy otroProxy = otro as AlumnoProxy;
+		    if (otroProxy != null)
+		    {
+		        otroProxy.asegurarAlumnoReal();
+		        return alumnoReal.sosMenor(otroProxy.alumnoReal);
+		    }
+		
+		    return alumnoReal.sosMenor(otro);
     	}
     	public bool sosMayor(Comparable otro)
     	{
     		asegurarAlumnoReal();
-    		return alumnoReal.sosMayor(otro);
+
+		    AlumnoProxy otroProxy = otro as AlumnoProxy;
+		    if (otroProxy != null)
+		    {
+		        otroProxy.asegurarAlumnoReal();
+		        return alumnoReal.sosMayor(otroProxy.alumnoReal);
+		    } 
+		
+		    return alumnoReal.sosMayor(otro);
     	}
+    	*/
     	
     	private void asegurarAlumnoReal()  // Metodo para no repetir código
 		{

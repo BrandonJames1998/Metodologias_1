@@ -4,9 +4,12 @@ using System.Collections.Generic;
 namespace TP_5
 {
 	
-	public class Pila : Coleccionable, Iterable
+	public class Pila : Coleccionable, Iterable, IOrdenable
 	{
 		private List<Comparable> elementos;
+		private IOrdenEnAula1 ordenInicio;
+        private IOrdenEnAula2 ordenLlegaAlumno;
+        private IOrdenEnAula1 ordenAulaLlena;
 		
 		public Pila()
 		{
@@ -15,7 +18,22 @@ namespace TP_5
 		
 		public void agregar(Comparable c)
 		{
-        	elementos.Add(c);
+			if (elementos.Count == 0 && ordenInicio != null)
+            {
+                ordenInicio.ejecutar();
+            }
+
+            elementos.Add(c);
+
+            if (ordenLlegaAlumno != null)
+            {
+                ordenLlegaAlumno.ejecutar(c);
+            }
+
+            if (elementos.Count == 40 && ordenAulaLlena != null)
+            {
+                ordenAulaLlena.ejecutar();
+            }
     	}
 		
 		public Comparable sacar() 
@@ -77,5 +95,18 @@ namespace TP_5
 		{
 			return new IteradorDePila(this);
 		}
+		
+		public void setOrdenInicio(IOrdenEnAula1 o)
+		{	
+			ordenInicio = o;
+		}
+        public void setOrdenLlegaAlumno(IOrdenEnAula2 o)
+        {	
+        	ordenLlegaAlumno = o;
+        }
+        public void setOrdenAulaLlena(IOrdenEnAula1 o)
+        {	
+        	ordenAulaLlena = o;
+        }
 	}
 }

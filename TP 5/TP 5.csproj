@@ -48,6 +48,7 @@
     <Compile Include="Clases\AlumnoAdapter.cs" />
     <Compile Include="Clases\AlumnoMuyEstudioso.cs" />
     <Compile Include="Clases\AlumnoProxy.cs" />
+    <Compile Include="Clases\Aula.cs" />
     <Compile Include="Clases\Cola.cs" />
     <Compile Include="Clases\ColeccionMultiple.cs" />
     <Compile Include="Clases\CompararPorAntiguedad.cs" />
@@ -75,6 +76,9 @@
     <Compile Include="Clases\IteradorDePila.cs" />
     <Compile Include="Clases\LectorDeDatos.cs" />
     <Compile Include="Clases\Numero.cs" />
+    <Compile Include="Clases\OrdenAulaLlena.cs" />
+    <Compile Include="Clases\OrdenInicio.cs" />
+    <Compile Include="Clases\OrdenLlegaAlumno.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Pila.cs" />
     <Compile Include="Clases\Profesor.cs" />
@@ -85,6 +89,9 @@
     <Compile Include="Interfaces\IEstrategiaComparables.cs" />
     <Compile Include="Interfaces\IObservado.cs" />
     <Compile Include="Interfaces\IObservador.cs" />
+    <Compile Include="Interfaces\IOrdenable.cs" />
+    <Compile Include="Interfaces\IOrdenEnAula1.cs" />
+    <Compile Include="Interfaces\IOrdenEnAula2.cs" />
     <Compile Include="Interfaces\Iterable.cs" />
     <Compile Include="Interfaces\Iterador.cs" />
     <Compile Include="MDPI.cs" />
