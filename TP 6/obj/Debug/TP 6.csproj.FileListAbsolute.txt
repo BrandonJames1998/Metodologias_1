@@ -1,0 +1,5 @@
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 6\bin\Debug\TP 6.exe.config
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 6\bin\Debug\TP 6.exe
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 6\bin\Debug\TP 6.pdb
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 6\obj\Debug\TP 6.exe
+C:\Users\Intel Nuc\Documents\SharpDevelop Projects\Metodologia_1\TP 6\obj\Debug\TP 6.pdb
